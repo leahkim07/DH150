@@ -1,3 +1,3 @@
 # DH150
-## Week 1 Project
+## Weekly Project
 ### Leah Kim
