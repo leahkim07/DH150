@@ -1,0 +1,117 @@
+<html>
+<head> </head>
+<style>
+
+  #searchBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  #logo {
+    font-size: calc(10vw + 1em);
+    color: hsla(131, 45%, 24%, 1);
+    user-select: none;
+  }
+
+  #searchInput {
+    font-size: calc(0.5vw + 1em);
+    color: black;
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 2.5em;
+    border-radius: 1.25em;
+    border: 1px solid hsla(131, 25%, 44%, 0.5);
+  }
+
+  #searchInput:hover {
+    filter: drop-shadow(1px 1px 2px hsla(131, 25%, 44%, 0.5));
+    cursor: pointer;
+  }
+
+  #searchInput:focus {
+    border: 2px solid hsla(120, 25%, 44%, 0.5);
+    outline: 2px solid hsla(120, 25%, 44%, 0.5);
+  }
+
+  #searchButton {
+    font-size: calc(0.5vw + 1em);
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    margin: 0.5em;
+    background-color: hsla(131, 45%, 24%, 1);
+    color: white;
+    border: 1px solid hsla(131, 0%, 44%, 0.5);
+  }
+
+  #searchButton:hover {
+    filter: drop-shadow(1px 1px 2px hsla(131, 25%, 44%, 0.5));
+    cursor: pointer;
+  }
+
+  #searchButton:focus {
+    border: 2px solid hsla(120, 25%, 44%, 0.5);
+    outline: 2px solid hsla(120, 25%, 44%, 0.5);
+    background-color: hsla(120, 25%, 44%, 0.5);
+  }
+
+  #background {
+    background-color: white;
+  }
+
+</style>
+
+<body id="background">
+
+  <div id="searchBox">
+    <h1 id="logo"> Goggle </h1>
+    <input id="searchInput" type="search" placeholder="Search Anything"> </input>
+    <button id="searchButton"> Submit </button>
+  </div>
+
+<script>
+
+  /*
+  1) document, ask where #logo is
+  2) write down the address of #logo
+  3) visit that address (#logo)
+  4) enter (#logo), find the attribute(style > color), change the value (red)
+  */
+
+  var myLogo = document.querySelector("#logo");
+  // console.log(myLogo.innerHTML);
+  // console.log(myLogo.style.color);
+  // myLogo.innerHTML = "Googly";
+  // myLogo.style.color = "black";
+
+  var myInput = document.querySelector("#searchInput");
+  // console.log(myInput.placeholder);
+  // console.log(myInput.value);
+
+  var myButton = document.querySelector("#searchButton");
+  // console.log(myButton.innerHTML);
+
+  var myBackground = document.querySelector("#background");
+  // console.log(myBackground.style.color);
+
+  var newLogo;
+
+  myButton.addEventListener("click", changeIt);
+  function changeIt() {
+    newLogo = myInput.value;
+    myInput.value = "";
+    myLogo.innerHTML = newLogo;
+
+    myLogo.style.color = "pink";
+    myLogo.style.fontSize = "15em";
+    myBackground.style.backgroundColor = "black";
+  }
+
+</script>
+
+</body>
+</html>
