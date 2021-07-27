@@ -242,9 +242,18 @@
     height: 44px;
     text-decoration: none;
   }
+  .iconButton {
+    font-size: 1.1em;
+    text-align: center;
+  }
+  .iconButton2 {
+    font-size: 1.1em;
+    text-align: center;
+  }
   *:focus {
     outline: 3px solid red;
   }
+
   h1 {
     font-size: 3em;
     font-weight: bold;
@@ -270,6 +279,10 @@
     <button type="button" id="BgFontButton"> </button>
     <button type="button" id="lightModeButton"> </button>
     <button type="button" id="darkModeButton"> </button>
+    <button type="button" class="iconButton">&#9680;</button>
+    <button type="button" class="iconButton">&#9742;</button>
+    <button type="button" class="iconButton2">&#9993;</button>
+
   </div>
 
   <header id="header">
@@ -503,6 +516,13 @@
     I conducted manual testing to check the compliance to <a href="https://www.w3.org/WAI/WCAG21/quickref/#principle2" target="_blank"> WCAG2.1 Guideline on Operable Interface. </a> The original California Science Center website is already mostly accessibile, but I enhanced the focus-visibility in my mock-up version of the website. This was achieved through the addition of CSS codes. The <a href="https://docs.google.com/spreadsheets/d/1oplRx3tk-QCGu5-NuSK_aVUbg0Fz1UqiXZWfYYwOskM/edit?usp=sharing" target="_blank"> results of keyboard-accessibility manual testing </a> are included.
   </small>
   </footer>
-<script> </script>
+<script>
+  var myBigFontBTN = document.querySelector("#BgFontButton");
+  var myBody = document.querySelector("body");
+  function MakeFontBigger() {
+    myBody.style.fontSize="2em";
+  myBigFontBTN.addEventListener("click", MakeFontBigger);
+  }
+</script>
 </body>
 </html>
