@@ -32,14 +32,20 @@
     color: black;
     font-family: 'Poppins', sans-serif;
   }
+  main {
+    margin: 2em;
+    padding: 1em;
+    background-color: hsla(265, 100%, 94%, 0.9);
+    font-family: 'Poppins', sans-serif;
+  }
 
-  #intro {
+/*#intro {
     margin: 1em;
     padding: 1em;
     background-color: hsla(265, 100%, 94%, 0.9);
     font-family: 'Poppins', sans-serif;
   }
-  #linkGallery {
+ #linkGallery {
     margin: 1em;
     padding: 1em;
     background-color: hsla(265, 100%, 94%, 0.9);
@@ -110,7 +116,7 @@
     padding: 1em;
     background-color: hsla(265, 100%, 94%, 0.9);
     font-family: 'Poppins', sans-serif;
-  }
+  } */
   #myEmailInput {
     margin-top: 0.5em;
     padding: 0.5em;
@@ -135,42 +141,7 @@
     color: hsla(265, 100%, 24%, 1);
     background-color: white;
   }
-  #SmFontButton {
-  width: 2em;
-  height: 2em;
-  padding: 0.5em;
-  background-image: url("./noun_Zoom Out_669268.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: 1px solid black;
-  }
-  #BgFontButton {
-    width: 2em;
-    height: 2em;
-    padding: 0.5em;
-    background-image: url("./noun_Zoom In_669270.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 1px solid black;
-  }
-  #lightModeButton {
-    width: 2em;
-    height: 2em;
-    padding: 0.5em;
-    background-image: url("./noun_brightness_2111674.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 1px solid black;
-  }
-  #darkModeButton {
-    width: 2em;
-    height: 2em;
-    padding: 0.5em;
-    background-image: url("./noun_dark mode_4066360.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 1px solid black;
-  }
+
 
   a {
     color: hsla(265, 100%, 30%, 1);
@@ -185,7 +156,7 @@
   .clickable {
     font-size: 0.75em;
     background-color: hsla(265, 100%, 24%, 1);
-    border: 1px solid white;
+    border: 1.5px solid white;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
@@ -247,11 +218,47 @@
     text-align: center;
   }
   .iconButton2 {
-    font-size: 1.1em;
+    font-size: 0.9em;
     text-align: center;
+  }
+  .iconButton:hover, .iconButton:focus {
+    background-color: lightgray;
+    border: 1px solid black;
+    text-decoration: underline;
+  }
+  .iconButton2:hover, .iconButton2:focus {
+    background-color: lightgray;
+    border: 1px solid black;
+    text-decoration: underline;
   }
   *:focus {
     outline: 3px solid red;
+  }
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  .dark-mode2 {
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+  }
+  .dark-mode-link {
+    color: blue;
+    font-weight: bold;
+    background: none;
+  }
+  .light-mode {
+    background-color: hsla(265, 100%, 90%, 1);
+    color: black;
+  }
+  .light-mode2 {
+    background-color: hsla(265, 100%, 94%, 1);
+    color: black;
+  }
+  .light-mode-link {
+    color: hotpink;
+    font-weight: bold;
+    background: none;
   }
 
   h1 {
@@ -275,13 +282,10 @@
 <body>
   <div id="accessibilityFeatures">
     <a class="bypass" href="#main"> Skip to Content </a> <br>
-    <button type="button" id="SmFontButton"> </button>
-    <button type="button" id="BgFontButton"> </button>
-    <button type="button" id="lightModeButton"> </button>
-    <button type="button" id="darkModeButton"> </button>
-    <button type="button" class="iconButton">&#9680;</button>
-    <button type="button" class="iconButton">&#9742;</button>
-    <button type="button" class="iconButton2">&#9993;</button>
+    <button type="button" id="SmFontButton" class="iconButton">&#8854;</button>
+    <button type="button" id="BgFontButton" class="iconButton">&#8853;</button>
+    <button type="button" id="lightModeButton" class="iconButton2">&#9728;</button>
+    <button type="button" id="darkModeButton" class="iconButton">&#9770;</button>
 
   </div>
 
@@ -412,70 +416,70 @@
   <main id="main">
     <section id="intro">
       <h3> MUST SEE <a class="hyperlink" href="#intro" tabindex="-1 " rel="bookmark"> # </a> </h3>
-      We look forward to welcoming you back to the California Science Center! We are all about stimulating curiosity and inspiring science learning in everyone. To protect vulnerable community members, including our younger guests who are not yet eligible for vaccination against COVID-19, masks are required for EVERYONE ages 2 and up when visiting the California Science Center. Timed-entry reservations are also required. <br>
-      <a class="clickable" href="https://californiasciencecenter.org/give-join/membership-levels-benefits" target=”_blank”> Become a member </a> <br>
+      We look forward to welcoming you back to the California Science Center! We are all about stimulating curiosity and inspiring science learning in everyone. To protect vulnerable community members, including our younger guests who are not yet eligible for vaccination against COVID-19, masks are required for EVERYONE ages 2 and up when visiting the California Science Center. Timed-entry reservations are also required. <br> <br>
+      <a class="clickable" href="https://californiasciencecenter.org/give-join/membership-levels-benefits" target=”_blank”> Become a member </a> <br><br> <hr>
     </section>
 
     <section id="linkGallery">
-      <h3> More to See & Do <a class="hyperlink" href="#linkGallery" tabindex="-1 " rel="bookmark"> # </a> </h3> <br>
+      <h3> More to See & Do <a class="hyperlink" href="#linkGallery" tabindex="-1 " rel="bookmark"> # </a> </h3> <br><br> <hr>
     </section>
 
     <section id="mission">
        <h3> OUR MISSION <a class="hyperlink" href="#mission" tabindex="-1 " rel="bookmark"> # </a> </h3>
-      The California Science Center aspires to stimulate curiosity and inspire science learning in everyone by creating fun, memorable experiences, because we value science as an indispensable tool for understanding our world, accessibility and inclusiveness, and enriching people's lives. <br>
+      The California Science Center aspires to stimulate curiosity and inspire science learning in everyone by creating fun, memorable experiences, because we value science as an indispensable tool for understanding our world, accessibility and inclusiveness, and enriching people's lives. <br><br> <hr>
     </section>
 
     <section id="endeavour">
       <h3> LAUNCH YOUR CURIOSITY! </h3>
       <h2> SPACE SHUTTLE ENDEAVOUR <a class="hyperlink" href="#endeavour" tabindex="-1 " rel="bookmark"> # </a> </h2>
       <img src="https://leahkim07.github.io/DH150/spaceshuttleendeavour.png" width="500" alt=""> <br>
-      <a class="clickable" href="https://californiasciencecenter.org/exhibits/endeavour-experience" target=”_blank”> Lift off! </a> &nbsp; <a class="clickable" href="https://californiasciencecenter.org/give-join/endeavourla-campaign/team-endeavour" target=”_blank”> Sponsor a tile </a><br>
+      <a class="clickable" href="https://californiasciencecenter.org/exhibits/endeavour-experience" target=”_blank”> Lift off! </a> &nbsp; <a class="clickable" href="https://californiasciencecenter.org/give-join/endeavourla-campaign/team-endeavour" target=”_blank”> Sponsor a tile </a> <br><br> <hr>
     </section>
 
     <section id="exhibits">
       <h3> CHECK OUT OUR ENGAGING </h3>
       <h2> EXHIBITS <a class="hyperlink" href="#exhibits" tabindex="-1 " rel="bookmark"> # </a> </h2>
-      <a class="clickable" href="https://californiasciencecenter.org/exhibits" target=”_blank”> Dive in! </a> <br>
+      <a class="clickable" href="https://californiasciencecenter.org/exhibits" target=”_blank”> Dive in! </a> <br><br> <hr>
     </section>
 
     <section id="programs">
       <h3> LEARNING MADE FUN </h3>
       <h2> PROGRAMS & EDUCATION <a class="hyperlink" href="#programs" tabindex="-1 " rel="bookmark"> # </a> </h2>
-      <a class="clickable" href="https://californiasciencecenter.org/programs" target=”_blank”> Connect and learn </a> <br>
+      <a class="clickable" href="https://californiasciencecenter.org/programs" target=”_blank”> Connect and learn </a> <br><br> <hr>
     </section>
 
     <section id="imax">
       <h3> COME SEE OUR </h3>
       <h2> IMAX EXPERIENCE <a class="hyperlink" href="#imax" tabindex="-1 " rel="bookmark"> # </a> </h2>
-      <a class="clickable" href="https://californiasciencecenter.org/imax" target=”_blank”> Expand your view </a> <br>
+      <a class="clickable" href="https://californiasciencecenter.org/imax" target=”_blank”> Expand your view </a> <br><br> <hr>
     </section>
 
     <section id="events">
       <h3> BOOK YOUR EVENT WITH US </h3>
       <h2> PRIVATE EVENTS <a class="hyperlink" href="#events" tabindex="-1 " rel="bookmark"> # </a> </h2>
-      <a class="clickable" href="https://californiasciencecenter.org/private-events" target=”_blank”> Plan an event! </a> <br>
+      <a class="clickable" href="https://californiasciencecenter.org/private-events" target=”_blank”> Plan an event! </a> <br><br> <hr>
     </section>
 
     <section id="campaign">
       <h3> SUPPORT OUR FUTURE VISION </h3>
       <h2> ENDEAVOUR LA CAMPAIGN <a class="hyperlink" href="#campaign" tabindex="-1 " rel="bookmark"> # </a> </h2>
-      <a class="clickable" href="https://californiasciencecenter.org/give-join/endeavourla-campaign" target=”_blank”> Join the mission! </a> <br>
+      <a class="clickable" href="https://californiasciencecenter.org/give-join/endeavourla-campaign" target=”_blank”> Join the mission! </a> <br><br> <hr>
     </section>
 
     <section id="shop">
       <h3> LEARNING AND FUN ARE IN STORE </h3>
       <h2> SHOP ONLINE <a class="hyperlink" href="#shop" tabindex="-1 " rel="bookmark"> # </a> </h2>
-      <a class="clickable" href="https://californiasciencecenter.org/visit/explorastore-gift-shop" target=”_blank”> Find the perfect gift! </a> <br>
+      <a class="clickable" href="https://californiasciencecenter.org/visit/explorastore-gift-shop" target=”_blank”> Find the perfect gift! </a> <br><br> <hr>
     </section>
 
     <section id="funlab">
-      <h3> Latest From the FunLab <a class="hyperlink" href="#funlab" tabindex="-1 " rel="bookmark"> # </a> </h3> <br>
+      <h3> Latest From the FunLab <a class="hyperlink" href="#funlab" tabindex="-1 " rel="bookmark"> # </a> </h3> <br><br> <hr>
     </section>
 
     <section id="member">
       <h3> GIVE & JOIN <a class="hyperlink" href="#member" tabindex="-1 " rel="bookmark"> # </a> </h3>
-      Become a Member or support the California Science Center in a variety of ways. <br>
-      <a class="clickable" href="https://californiasciencecenter.org/give-join" target=”_blank”> Explore giving options </a> <br>
+      Become a Member or support the California Science Center in a variety of ways. <br> <br>
+      <a class="clickable" href="https://californiasciencecenter.org/give-join" target=”_blank”> Explore giving options </a> <br><br> <hr>
     </section>
 
     <section id="newsletter">
@@ -489,7 +493,7 @@
       <a href="https://twitter.com/casciencecenter" target="_blank" class="fab fa-twitter-square"> </a>
       <a href="https://www.instagram.com/californiasciencecenter/" target="_blank"  class="fab fa-instagram-square"> </a>
       <a href="https://www.youtube.com/user/CalScience" target="_blank"  class="fab fa-youtube-square"> </a>
-
+      <br> <hr>
     </section>
   <a class="bypass" href="#header"> Back to Top </a>
   </main>
@@ -501,11 +505,12 @@
       <a href="https://goo.gl/maps/CSRyzYvnjnnrDC29A" target="_blank">
       700 Exposition Park Drive <br>
       Los Angeles, CA 90037 <br>
-    </a> <br>
+      </a> <br>
       <a href="https://californiasciencecenter.org/visit/directions-parking-transportation" target="_blank"> Get Directions </a> <br> <br>
       Open Daily 10am-5pm <br>
       Free General Admission <br> <br>
       <a href="https://californiasciencecenter.org/contact" target="_blank"> CONTACT US </a> <br>
+      <a href="tel:+1-323-724-3623">&#9742; (323) 724-3623 </a> <br>
       <a href="https://californiasciencecenter.org/privacy-policy" target="_blank"> PRIVACY POLICY </a>
     </address>
     </section>
@@ -517,11 +522,49 @@
   </small>
   </footer>
 <script>
-  var myBigFontBTN = document.querySelector("#BgFontButton");
   var myBody = document.querySelector("body");
+  var myHeader = document.querySelector("header");
+  var myFooter = document.querySelector("footer");
+  var myMain = document.querySelector("main");
+
+  var myBigFontBTN = document.querySelector("#BgFontButton");
+  myBigFontBTN.addEventListener("click", MakeFontBigger);
   function MakeFontBigger() {
     myBody.style.fontSize="2em";
-  myBigFontBTN.addEventListener("click", MakeFontBigger);
+  }
+
+  var mySmallFontBTN = document.querySelector("#SmFontButton");
+  mySmallFontBTN.addEventListener("click", MakeFontSmaller);
+  function MakeFontSmaller() {
+    myBody.style.fontSize="1em";
+  }
+
+  var myDarkModeBTN = document.querySelector("#darkModeButton");
+  myDarkModeBTN.addEventListener("click", MakeItDark);
+  function MakeItDark() {
+    myBody.classList.toggle("dark-mode");
+    myHeader.classList.toggle("dark-mode");
+    myFooter.classList.toggle("dark-mode");
+    myMain.classList.toggle("dark-mode2");
+
+    const allLinks = document.links;
+      for (let link of allLinks) {
+        link.classList.toggle("dark-mode-link");
+      }
+  }
+
+  var myLightModeBTN = document.querySelector("#lightModeButton");
+  myLightModeBTN.addEventListener("click", MakeItLight);
+  function MakeItLight() {
+    myBody.classList.toggle("light-mode");
+    myHeader.classList.toggle("light-mode");
+    myFooter.classList.toggle("light-mode");
+    myMain.classList.toggle("light-mode2");
+
+    const allLinks = document.links;
+      for (let link of allLinks) {
+        link.classList.toggle("light-mode-link");
+      }
   }
 </script>
 </body>
