@@ -144,7 +144,7 @@
 
 
   a {
-    color: hsla(265, 100%, 30%, 1);
+    color: hsla(265, 100%, 20%, 1);
     text-decoration: none;
     font-weight: bold;
   }
@@ -243,7 +243,7 @@
     color: white;
   }
   .dark-mode-link {
-    color: blue;
+    color: aqua;
     font-weight: bold;
     background: none;
   }
@@ -282,10 +282,10 @@
 <body>
   <div id="accessibilityFeatures">
     <a class="bypass" href="#main"> Skip to Content </a> <br>
-    <button type="button" id="SmFontButton" class="iconButton">&#8854;</button>
-    <button type="button" id="BgFontButton" class="iconButton">&#8853;</button>
-    <button type="button" id="lightModeButton" class="iconButton2">&#9728;</button>
-    <button type="button" id="darkModeButton" class="iconButton">&#9770;</button>
+    <button type="button" id="SmFontButton" aria-label="make font size smaller" class="iconButton">&#8854;</button>
+    <button type="button" id="BgFontButton" aria-label="make font size bigger" class="iconButton">&#8853;</button>
+    <button type="button" id="lightModeButton" aria-label="turn light mode" class="iconButton2">&#9728;</button>
+    <button type="button" id="darkModeButton" aria-label="turn dark mode" class="iconButton">&#9770;</button>
 
   </div>
 
@@ -489,10 +489,10 @@
         <input id="myEmailInput" type="search" placeholder="Enter your email"> </input>
         <button id="myEmailButton"> Sign Up </button>
       </form>
-      <a href="https://www.facebook.com/CaliforniaScienceCenter/" target="_blank" class="fab fa-facebook-square"> </a>
-      <a href="https://twitter.com/casciencecenter" target="_blank" class="fab fa-twitter-square"> </a>
-      <a href="https://www.instagram.com/californiasciencecenter/" target="_blank"  class="fab fa-instagram-square"> </a>
-      <a href="https://www.youtube.com/user/CalScience" target="_blank"  class="fab fa-youtube-square"> </a>
+      <a href="https://www.facebook.com/CaliforniaScienceCenter/" target="_blank" aria-label="Visit California Science Center Facebook" class="fab fa-facebook-square"> </a>
+      <a href="https://twitter.com/casciencecenter" target="_blank" aria-label="Visit California Science Center Twitter" class="fab fa-twitter-square"> </a>
+      <a href="https://www.instagram.com/californiasciencecenter/" target="_blank" aria-label="Visit California Science Center Instagram" class="fab fa-instagram-square"> </a>
+      <a href="https://www.youtube.com/user/CalScience" target="_blank" aria-label="Visit California Science Center YouTube" class="fab fa-youtube-square"> </a>
       <br> <hr>
     </section>
   <a class="bypass" href="#header"> Back to Top </a>
