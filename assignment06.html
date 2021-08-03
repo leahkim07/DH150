@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> DH150 Web-coding for UX project: Redesign California Science Center website for better Accessibility </title>
+  <meta charset="utf-8">
+  <meta name="description" content="Demonstration of Web coding for User experience in Digital Humanities">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Accessibility, SEO">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <style>
+    body {
+      margin: 0;
+      background-color: hsla(265, 100%, 86%, 1);
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2em;
+    }
+    header {
+      text-align: center;
+      background-color: hsla(265, 100%, 74%, 1);
+      color: black;
+      padding-bottom: 2em;
+    }
+    footer {
+      text-align: center;
+      background-color: hsla(265, 100%, 74%, 1);
+      color: black;
+      font-size: 0.95em;
+      line-height: 3em;
+      height: 3em;
+    }
+    main {
+      margin: 20px;
+    }
+    section {
+      border-bottom: 1px dotted hsl(265, 100%, 24%);
+    }
+    button {
+      background-color: hsla(265, 100%, 24%, 1);
+      color: white;
+      font-size: 0.85em;
+      line-height: 2em;
+      border-radius: 10px;
+      width: 100%;
+      text-transform: uppercase;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+
+    .bypass {
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      padding: 0.5em;
+      line-height: 2.5em;
+      color: black;
+      text-decoration: none;
+      margin: 10px;
+      border-radius: 1em 1em;
+      border: 1px solid hsla(265, 100%, 54%, 1);
+      box-shadow: 2px 2px 1px 1px hsla(265, 100%, 24%, 0.5);
+    }
+    .bypass:focus {
+      position: static;
+      width: auto;
+      height: auto;
+    }
+    .bypass:hover, .bypass:focus {
+      padding: 0.5em;
+      line-height: 2.52em;
+      background-color: hsla(265, 100%, 24%, 1);
+      color: white;
+    }
+
+    #amnh {
+      width: 15vw;
+      height: 9vh;
+      background-image: url("https://leahkim07.github.io/DH150/museum1-audit.png");
+      background-size: cover;
+    }
+
+    #met {
+      width: 15vw;
+      height: 9vh;
+      background-image: url("https://leahkim07.github.io/DH150/museum2-audit.png");
+      background-size: cover;
+    }
+
+    #csc {
+      width: 15vw;
+      height: 9vh;
+      background-image: url("https://leahkim07.github.io/DH150/museum3-audit.png");
+      background-size: cover;
+    }
+
+    #moma {
+      width: 15vw;
+      height: 9vh;
+      background-image: url("https://leahkim07.github.io/DH150/museum4-audit.png");
+      background-size: cover;
+    }
+
+    #louvre {
+      width: 15vw;
+      height: 9vh;
+      background-image: url("https://leahkim07.github.io/DH150/museum5-audit.png");
+      background-size: cover;
+    }
+
+    #images {
+      display: inline-flex;
+    }
+
+    #assign02 {
+      background-image: url("https://leahkim07.github.io/DH150/assignment02-audit.png");
+      background-size: cover;
+}
+    #assign03 {
+      background-image: url("https://leahkim07.github.io/DH150/assignment03-03-audit.png");
+      background-size: cover;
+}
+    #assign04 {
+      background-image: url("https://leahkim07.github.io/DH150/assignment04-audit.png");
+      background-size: cover;
+}
+    #assign05 {
+      background-image: url("https://leahkim07.github.io/DH150/assignment05.1-audit.png");
+      background-size: cover;
+}
+
+    .imgBox {
+      width: 15vw;
+      margin:1vw;
+      inline-size: 15vw;
+      overflow-wrap: break-word;
+      padding: 1vw;
+      background-color: hsla(265, 100%, 94%, 0.9);
+    }
+    .card {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      width: 96vw;
+      gap: 10px;
+    }
+    .dummy {
+      grid-row: 1;
+      grid-column: 1;
+      background-color: hsla(265, 100%, 94%, 0.9);
+      text-align: center;
+      color: white;
+    }
+    .description {
+      grid-row: 1;
+      grid-column: 2;
+    }
+    .hyperlink {
+      color: hsla(265, 100%, 86%, 1);
+      overflow: hidden;
+    }
+    .hyperlink:hover {
+      color: hsla(265, 100%, 24%, 1);
+    }
+    .myNav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: none;
+      width: 100vw;
+      height: 3em;
+    }
+
+    li {
+      float: left;
+      background-color: none;
+      margin: 2px;
+      border: 2px solid black;
+    }
+
+    li a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      background-color: hsl(265, 100%, 86%);
+    }
+
+    li a:hover {
+      background-color: hsl(265, 100%, 24%);
+      color: white;
+    }
+    a {
+      color: hsla(265, 100%, 20%, 1);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover, a:focus {
+      background-color: white;
+      border: 1px solid #660000;
+      text-decoration: underline;
+    }
+
+
+    @media(min-width: 601px) and (max-width: 910px) {
+      li {
+        display: block;
+        width: 100vw;
+        margin: 1px;
+      }
+      h1 {
+        padding-top: 2em;
+      }
+    }
+    @media(max-width: 600px) {
+     .dummy {
+       display: none;
+     }
+     .description {
+       padding: 1vw;
+       grid-row: 1;
+       grid-column: 1/3;
+     }
+     li {
+       display: block;
+       width: 100vw;
+       margin: 1px;
+     }
+     h1 {
+       padding-top: 2em;
+     }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="bypass" href="#main"> Skip to Content </a> <br>
+  <header>
+    <nav>
+      <ul class="myNav">
+        <li> <a href="#amnh" rel="bookmark" title="american museum of natural history analysis" class="active"> Museum01: AMNH </a> </li>
+        <li> <a href="#met" rel="bookmark" title="the met analysis" class="active"> Museum02: The MET </a> </li>
+        <li> <a href="#csc" rel="bookmark" title="california science center analysis" class="active"> Museum03: California Science Center </a> </li>
+        <li> <a href="#moma" rel="bookmark" title="american museum of natural history analysis" class="active"> Museum04: MoMA </a> </li>
+        <li> <a href="#louvre" rel="bookmark" title="american museum of natural history analysis" class="active"> Museum05: The Louvre </a> </li>
+      </ul>
+    </nav>
+    <br><br>
+
+    <h1> Web-Accessibility Project: California Science Center Website </h1>
+    <h2> DH150 2021 Summer - Project Documentation by Leah Kim </h2>
+    <hr>
+    <h3> About the Project </h3>
+    <p> This project is to test and improve the web-accessibility of museum websites. Specifically, I focused on improving the accessibility and SEO scores of the original California Science Center website. This was achieved through a multitude of steps, including semantic structure, color contrast, keyboard accessibility, screen reader, and ARIA labeling. </p>
+  </header>
+
+  <main id="main">
+    <section id="research">
+      <h3> Research <a class="hyperlink" href="#research" tabindex="-1 " rel="bookmark"> # </a> </h3>
+      <p> To start this project, I chose five different museum websites. I selected the websites of the American Museum of Natural History, The MET, California Science Center, MoMA, and the Louvre. Then, I utilized Google Chrome's development tool Lighthouse to run an audit on the accessibility and SEO scores of each website. </p>
+
+    <div id="images">
+      <article class="imgBox">
+        <p id="amnh"> </p>
+        <p> 1) American Museum of Natural History <a href="https://www.amnh.org/" target="_blank" title="go to american museum of natural history website"> https://www.amnh.org/, </a> Accessibility (93), SEO (100) </p>
+      </article>
+
+      <article class="imgBox">
+        <p id="met"> </p>
+        <p> 2) The MET <a href="https://www.metmuseum.org/" target="_blank" title="go to the met museum website"> https://www.metmuseum.org/, </a> Accessibility (91), SEO (83) </p>
+      </article>
+
+      <article class="imgBox">
+        <p id="csc"> </p>
+        <p> 3) California Science Center <a href="https://californiasciencecenter.org/" target="_blank" title="go to the california science center website"> https://californiasciencecenter.org/, </a> Accessibility (93), SEO (75) </p>
+      </article>
+
+      <article class="imgBox">
+        <p id="moma"> </p>
+        <p> 4) MoMA <a href="https://www.moma.org/" target="_blank" title="go to the moma website"> https://www.moma.org/, </a> Accessibility (94), SEO (100) </p>
+      </article>
+
+      <article class="imgBox">
+        <p id="louvre"> </p>
+        <p> 5) The Louvre <a href="https://www.louvre.fr/en" target="_blank" title="go to the louvre museum website"> https://www.louvre.fr/en, </a> Accessibility (100), SEO (100) </p>
+      </article>
+    </div>
+
+    <article id="analysis">
+      <p> Examining the scores across these museum websites, I noticed some common accessibility and SEO issues that affected their respective scores. These included insufficient color contrast, links without descriptions, images without descriptions, lack of metadata, ARIA issues, and more. Through this investigation, I learned that accessibility and SEO are related, and having a higher SEO score typically improves accessibility. Case in point, many of the websites that had a high SEO score also generally had a high accessibility score. Some of the common issues that lowered accessibility scores were contrast issues, no discernible names for links, and navigation issues. One of the websites, the Louvre, had perfect accessibility and SEO scores, and while navigating the website, I found it very easy and clear to follow. The lowest SEO score was 75, which was for the California Science Center, and the lowest accessibility score was 91 for the MET. The California Science Center had a low SEO score because document does not have meta description, links do not have descriptive test, and links are not crawlable. This is the website I chose to improve. Overall, many of these websites were mostly accessible, but there is room for improvement to make it even more accessible. The Louvre's website is the model website. </p>
+    </article>
+
+    </section>
+
+      <section id=”project”>
+        <h3> Design Process <a class="hyperlink" href="#project" tabindex="-1 " rel="bookmark"> # </a> </h3>
+        <p> Regarding the design of the website for both visual and accessibility purposes, I chose to improve the California Science Center website. This was because the accessibility score, although relatively high but lower compared to the others, had some room for improvement. As for the SEO score, it scored the lowest of the five museums, which was another reason for choosing this website. I also thought I could redesign the website to make it look cleaner and to make tabbing easier. The following highlights the steps I took to improve both the accessibility and SEO scores. </p>
+
+        <div id="images2">
+          <article class="card" id="semanticStructure">
+            <p class="dummy" id="assign02"> Semantic Structure </p>
+            <p class="description"> To ensure the semantic structure of HTML, I made sure to include all the components and double check that each one is placed in the correct order and that it is closed. This was fairly simple, but it was important as the first step to improve accessibility. The first parts of styling were also introduced in the forms of headings, line breaks, horizontal lines, and more. <br><br>
+            <a href="https://leahkim07.github.io/DH150/assignment02.html" target="_blank"> <button> Check the outcome of semantic structure (assignment 02) </button> </a> </p>
+          </article>
+
+          <article class="card" id="colorContrast">
+            <p class="dummy" id="assign03"> Color Contrast </p>
+            <p class="description"> The following step was to ensure sufficient color contrast, at a ratio of 4.5:1. This required much more experimentation because it was not easy to utilize colors that fit the color scheme and had good contrast with each other. I used a color picker, a color contrast checker, and a color scheme design to incorporate some styling to my website. CSS was introduced, and I used this to add a font, change layouts, and more to improve the overall design. <br><br>
+            <a href="https://leahkim07.github.io/DH150/assignment03-01.html" target="_blank"> <button> Check the outcome of color contrast (assignment 03) </button> </a> </p>
+          </article>
+
+          <article class="card" id="keyboard">
+            <p class="dummy" id="assign04"> Keyboard Accessibility </p>
+            <p class="description"> Afterwards, it was time to tackle keyboard accessibility. This was achieved through manual testing, and this was where the CSS features of hover and focus, as well as bypass blocks were important. The original website had slight issues with tabbing order, so I made sure to improve that on my own version. The manual testing of both websites helped to correct minor mistakes in keyboard accessibility. <br><br>
+            <a href="https://leahkim07.github.io/DH150/assignment04.html" target="_blank"> <button> Check the outcome of keyboard accessibility (assignment 04) </button> </a> </p>
+          </article>
+
+          <article class="card" id="ariaLabel">
+            <p class="dummy" id="assign05"> Screen-reader and ARIA </p>
+            <p class="description"> In this final step, I added aria-labels to make sure the screen-reader can successfully identify all of the website components. This was also polished through testing with the screen-reader myself, and it seemed to be working well. Interactive icons for accessibility purposes, such as font-size increasing and contrast modes, were also included. <br><br>
+            <a href="https://leahkim07.github.io/DH150/assignment05.1.html" target="_blank"> <button> Check the outcome of screen-reader and ARIA (assignment 05) </button> </a> </p>
+          </article>
+        </div>
+
+        <article id="reflection">
+          <p> Through these accessibility-improving features, I learned that even simple steps can be taken to improve accessibility. The extra CSS design step can make a significant difference in improving website navigation, like the bypass blocks and hover options. Moreover, I learned how aria-labels and adding descriptive text is very important to accessibility. Many of these things are overlooked by those without disabilities, but after going through the process of designing a website with as much accessibility features as possible, I will always be looking out for these features on all websites. The original website had some insufficient color contrast according to the audit, and it also had a lack of metadata, links without discernible links, and links that were not crawlable. The scores were 93 and 75 respectively. My mockup website now has full accessiblility and SEO from all the improvements taken with each assignment. Particularly, the inclusion of metadata in the head of html and modifying link names made the biggest difference. In the future, I would like to work on adding interactive elements like a photo slideshow and more buttons for users. Overall, it was a great learning experience while building my accessible website. </p>
+        </article>
+
+      </section>
+
+      <a class="bypass" href="#header"> Back to Top </a>
+
+  </main>
+
+  <footer>
+    <p> Leah Kim (Contact Info: <a href=”mailto:gettyinfo@getty.edu”> leahk2001@gmail.com</a>), Copyright 2021 </p>
+  </footer>
+
+<script>
+  var myTitle = document.querySelector("title");
+  myTitle.innerHTML = "DH150 Web-coding for UX project: Redesign California Science Center Website for Better Accessibility";
+</script>
+
+</body>
+</html>
