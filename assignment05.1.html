@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title> DH150 Web-Coding UX Project: Redesigning the California Science Center Website For Better Accessibility </title>
+  <meta charset="utf-8">
+  <meta name="description" content="Demonstration of Web coding for User experience in Digital Humanities">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Accessibility, SEO">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://ux-ui-design-lab.github.io/DH150-UX-WebCoding/icons/css/all.css" rel="stylesheet">
+</head>
+
+<style>
+  header {
+    margin: 0;
+    padding: 1em;
+    background-color: hsla(265, 100%, 74%, 1);
+    color: black;
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    margin: 0;
+    padding: 1.5em;
+    background-color: hsla(265, 100%, 84%, 1);
+    font-family: 'Poppins', sans-serif;
+  }
+  footer {
+    background: purple;
+    margin: 0;
+    padding: 1em;
+    background-color: hsla(265, 100%, 74%, 1);
+    color: black;
+    font-family: 'Poppins', sans-serif;
+  }
+  main {
+    margin: 2em;
+    padding: 1em;
+    background-color: hsla(265, 100%, 94%, 0.9);
+    font-family: 'Poppins', sans-serif;
+  }
+
+/*#intro {
+    margin: 1em;
+    padding: 1em;
+    background-color: hsla(265, 100%, 94%, 0.9);
+    font-family: 'Poppins', sans-serif;
+  }
+ #linkGallery {
+    margin: 1em;
+    padding: 1em;
+    background-color: hsla(265, 100%, 94%, 0.9);
+    font-family: 'Poppins', sans-serif;
+  }
+  #mission {
+    margin: 1em;
+    padding: 1em;
+    background-color: hsla(265, 100%, 94%, 0.9);
+    font-family: 'Poppins', sans-serif;
+  }
+  #endeavour {
+    margin: 1em;
+    padding: 1em;
+    background-color: hsla(265, 100%, 94%, 0.9);
+    font-family: 'Poppins', sans-serif;
+  }
+  #exhibits {
+    margin: 1em;
+    padding: 1em;
+    background-color: hsla(265, 100%, 94%, 0.9);
+    font-family: 'Poppins', sans-serif;
+  }
+  #programs {
+    margin: 1em;
+    padding: 1em;
+    background-color: hsla(265, 100%, 94%, 0.9);
+    font-family: 'Poppins', sans-serif;
+  }
+  #imax {
+    margin: 1em;
+    padding: 1em;
+    background-color: hsla(265, 100%, 94%, 0.9);
+    font-family: 'Poppins', sans-serif;
+  }
+  #events {
+    margin: 1em;
+    padding: 1em;
+    background-color: hsla(265, 100%, 94%, 0.9);
+    font-family: 'Poppins', sans-serif;
+  }
+  #campaign {
+    margin: 1em;
+    padding: 1em;
+    background-color: hsla(265, 100%, 94%, 0.9);
+    font-family: 'Poppins', sans-serif;
+  }
+  #shop {
+    margin: 1em;
+    padding: 1em;
+    background-color: hsla(265, 100%, 94%, 0.9);
+    font-family: 'Poppins', sans-serif;
+  }
+  #funlab {
+    margin: 1em;
+    padding: 1em;
+    background-color: hsla(265, 100%, 94%, 0.9);
+    font-family: 'Poppins', sans-serif;
+  }
+  #member {
+    margin: 1em;
+    padding: 1em;
+    background-color: hsla(265, 100%, 94%, 0.9);
+    font-family: 'Poppins', sans-serif;
+  }
+  #newsletter {
+    margin: 1em;
+    padding: 1em;
+    background-color: hsla(265, 100%, 94%, 0.9);
+    font-family: 'Poppins', sans-serif;
+  } */
+  #myEmailInput {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    border: 1px solid hsla(265, 100%, 24%, 1);
+    font-size: 1em;
+    border-radius: 10px 0 0 10px;
+  }
+  #myEmailInput:hover {
+    border: 2px solid hsla(265, 100%, 24%, 1);
+  }
+  #myEmailButton{
+    margin-top: 0.5em;
+    padding: 0.5em;
+    border: 1px solid hsla(265, 100%, 24%, 0.8);
+    font-size: 1em;
+    color: white;
+    background-color: hsla(265, 100%, 24%, 1);
+    border-radius: 0 10px 10px 0;
+  }
+  #myEmailButton:hover, #myEmailButton:focus {
+    border: 2px solid hsla(265, 100%, 24%, 0.8);
+    color: hsla(265, 100%, 24%, 1);
+    background-color: white;
+  }
+
+
+  a {
+    color: hsla(265, 100%, 20%, 1);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a:hover, a:focus {
+    background-color: white;
+    border: 1px solid #660000;
+    text-decoration: underline;
+  }
+  .clickable {
+    font-size: 0.75em;
+    background-color: hsla(265, 100%, 24%, 1);
+    border: 1.5px solid white;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5em;
+  }
+  .clickable:hover, .clickable:focus {
+    font-size: 0.75em;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    text-decoration: underline;
+    padding: 0.5em;
+  }
+  .hyperlink {
+    color: black;
+    text-decoration: none;
+  }
+  .hyperlink:hover, .hyperlink:focus {
+    color: hsl(265, 100%, 44%);
+    text-decoration: underline;
+  }
+  .bypass {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    padding: 0.5em;
+    line-height: 2.5em;
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 1em 1em;
+    border: 1px solid hsla(265, 100%, 54%, 1);
+    box-shadow: 2px 2px 1px 1px hsla(265, 100%, 24%, 0.5);
+  }
+  .bypass:focus {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+  .bypass:hover, .bypass:focus {
+    padding: 0.5em;
+    line-height: 2.52em;
+    background-color: hsla(265, 100%, 24%, 1);
+    color: white;
+  }
+  .fab {
+    padding: 5px;
+    font-size: 44px;
+    width: 44px;
+    height: 44px;
+    text-decoration: none;
+  }
+  .iconButton {
+    font-size: 1.1em;
+    text-align: center;
+  }
+  .iconButton2 {
+    font-size: 0.9em;
+    text-align: center;
+  }
+  .iconButton:hover, .iconButton:focus {
+    background-color: lightgray;
+    border: 1px solid black;
+    text-decoration: underline;
+  }
+  .iconButton2:hover, .iconButton2:focus {
+    background-color: lightgray;
+    border: 1px solid black;
+    text-decoration: underline;
+  }
+  *:focus {
+    outline: 3px solid red;
+  }
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  .dark-mode2 {
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+  }
+  .dark-mode-link {
+    color: aqua;
+    font-weight: bold;
+    background: none;
+  }
+  .light-mode {
+    background-color: hsla(265, 100%, 90%, 1);
+    color: black;
+  }
+  .light-mode2 {
+    background-color: hsla(265, 100%, 94%, 1);
+    color: black;
+  }
+  .light-mode-link {
+    color: hotpink;
+    font-weight: bold;
+    background: none;
+  }
+
+  h1 {
+    font-size: 3em;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+  h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+  h4 {
+    font-size: 0.75em;
+    text-transform: uppercase;
+  }
+</style>
+
+<body>
+  <div id="accessibilityFeatures">
+    <a class="bypass" href="#main"> Skip to Content </a> <br>
+    <button type="button" id="SmFontButton" aria-label="make font size smaller" class="iconButton">&#8854;</button>
+    <button type="button" id="BgFontButton" aria-label="make font size bigger" class="iconButton">&#8853;</button>
+    <button type="button" id="lightModeButton" aria-label="turn light mode" class="iconButton2">&#9728;</button>
+    <button type="button" id="darkModeButton" aria-label="turn dark mode" class="iconButton">&#9770;</button>
+
+  </div>
+
+  <header id="header">
+    <nav id="cscMenuGeneral">
+      <a href="https://californiasciencecenter.org" target="_blank" aria-label="California Science Center Logo with Link to Website">
+      <img src="https://leahkim07.github.io/DH150/csclogo.png" width="150" alt="">
+      </a>
+      <a href="https://californiasciencecenter.org/visit" target=”_blank”> Visit </a> |
+      <a href="https://californiasciencecenter.org/exhibits" target=”_blank”> Exhibits </a> |
+      <a href="https://californiasciencecenter.org/imax" target=”_blank”> IMAX </a> |
+      <a href="https://californiasciencecenter.org/programs" target=”_blank”> Programs </a> |
+      <a href="https://californiasciencecenter.org/funlab" target=”_blank”> FunLab </a> |
+      <a href="https://store.californiasciencecenter.org/?_ga=2.264960463.1379278207.1626764021-1438459775.1626764021" target=”_blank”> Shop </a> &nbsp;
+      <a class="clickable" href="https://californiasciencecenter.org/give-join" target=”_blank”> Give & Join </a> &nbsp; <a class="clickable" href="https://californiasciencecenter.org/visit/get-reservations-tickets" target=”_blank”> Plan Your Day </a>
+    </nav>
+    <h1> California Science Center </h1>
+    <h2> SCIENCE LEARNING FOR EVERYONE </h2>
+    <h2> Masks required for all <h1>
+    <h3> To keep our younger guests safe, masks are required regardless of vaccination status. </h3>
+    <a class="clickable" href="https://californiasciencecenter.org/visit" target=”_blank” aria-label="Click to learn more about visiting the museum"> Visit the Museum </a> <br> <br>
+    <nav id="cscMenuInformation">
+      <a href="https://californiasciencecenter.org/visit/directions-parking-transportation" target=”_blank”> Directions </a> |
+      <a href="https://californiasciencecenter.org/visit/accessibility-services-amenities" target=”_blank”> Accessibility </a> |
+      <a href="https://californiasciencecenter.org/information-educators" target=”_blank”> Teachers </a> |
+      <a href="https://californiasciencecenter.org/give-join/membership-levels-benefits" target=”_blank”> Members </a> |
+      <a href="https://californiasciencecenter.org/about-us" target=”_blank”> About us </a> |
+    </nav>
+    <img src="https://leahkim07.github.io/DH150/scubadiver.png" width="500" alt="">
+  </header>
+
+  <!--aside>
+    <section id="subIntro">
+      <h2> Stimulating Curiosity & Inspiring Science Learning In Everyone </h2>
+    </section>
+
+    <section id="about">
+      <h3> ABOUT US </h3>
+      <ul>
+        <li> Our Story </li>
+        <li> Samuel Oschin Air and Space Center </li>
+        <li> Science Center School </li>
+        <li> Science Center Governance </li>
+        <li> Accreditation & Affiliations </li>
+      </ul>
+    </section>
+
+    <section id="give">
+      <h3> GIVE & JOIN </h3>
+      <ul>
+        <li> Membership Levels & Benefits </li>
+        <li> Member News & Events </li>
+        <li> Partners in Learning Annual Giving </li>
+        <li> EndeavourLA Campaign </li>
+        <li> Planned Giving </li>
+        <li> Discovery Ball </li>
+      </ul>
+    </section>
+
+    <section id="press">
+      <h3> PRESS ROOM </h3>
+      <ul>
+        <li> Press Releases </li>
+        <li> Press Kits </li>
+        <li> Fact Sheets </li>
+        <li> Spokespeople </li>
+        <li> Media Coverage </li>
+        <li> Photography, Filming, and Press Visits </li>
+        <li> Photo and B-roll Request </li>
+      </ul>
+    </section>
+
+    <section id="employment">
+      <h3> EMPLOYMENT OPPORTUNITIES </h3>
+      <ul>
+        <li> State Hiring Process </li>
+      </ul>
+    </section>
+
+    <section id="volunteer">
+      <h3> VOLUNTEER </h3>
+      <ul>
+        <li> Volunteer Opportunities </li>
+        <li> THE MUSES </li>
+      </ul>
+    </section>
+
+    <section id="privateEvents">
+      <h3> PRIVATE EVENTS </h3>
+      <ul>
+        <li> Event Types </li>
+        <li> Event Spaces </li>
+        <li> Catering </li>
+        <li> Enhancements </li>
+        <li> Accolades </li>
+        <li> Our Team </li>
+        <li> Private Event Inquiries </li>
+      </ul>
+    </section>
+
+    <section id="sellExhibits">
+      <h3> EXHIBITS FOR RENT & SALE </h3>
+      <ul>
+        <li> Dogs! A Science Tail </li>
+        <li> Goose Bumps: The Science of Fear </li>
+      </ul>
+    </section>
+
+    <section id="moreInfo">
+      <h3> INFORMATION FOR PARENTS </h3>
+      <h3> INFORMATION FOR EDUCATORS </h3>
+    </section>
+
+    <section>
+      <img src="https://leahkim07.github.io/DH150/csclogo.png" width="200" alt="">
+    <address>
+      700 Exposition Park Drive <br>
+      Los Angeles, CA 90037 <br>
+      <h4> Get Directions </h4>
+      Open Daily 10am-5pm <br>
+      Free General Admission <br>
+      <h4> CONTACT US </h4>
+      <h4> PRIVACY POLICY </h4> <br>
+    </address>
+    </section>
+  </aside> -->
+
+  <main id="main">
+    <section id="intro">
+      <h3> MUST SEE <a class="hyperlink" href="#intro" tabindex="-1 " rel="bookmark"> # </a> </h3>
+      We look forward to welcoming you back to the California Science Center! We are all about stimulating curiosity and inspiring science learning in everyone. To protect vulnerable community members, including our younger guests who are not yet eligible for vaccination against COVID-19, masks are required for EVERYONE ages 2 and up when visiting the California Science Center. Timed-entry reservations are also required. <br> <br>
+      <a class="clickable" href="https://californiasciencecenter.org/give-join/membership-levels-benefits" target=”_blank”> Become a member </a> <br><br> <hr>
+    </section>
+
+    <section id="linkGallery">
+      <h3> More to See & Do <a class="hyperlink" href="#linkGallery" tabindex="-1 " rel="bookmark"> # </a> </h3> <br><br> <hr>
+    </section>
+
+    <section id="mission">
+       <h3> OUR MISSION <a class="hyperlink" href="#mission" tabindex="-1 " rel="bookmark"> # </a> </h3>
+      The California Science Center aspires to stimulate curiosity and inspire science learning in everyone by creating fun, memorable experiences, because we value science as an indispensable tool for understanding our world, accessibility and inclusiveness, and enriching people's lives. <br><br> <hr>
+    </section>
+
+    <section id="endeavour">
+      <h3> LAUNCH YOUR CURIOSITY! </h3>
+      <h2> SPACE SHUTTLE ENDEAVOUR <a class="hyperlink" href="#endeavour" tabindex="-1 " rel="bookmark"> # </a> </h2>
+      <img src="https://leahkim07.github.io/DH150/spaceshuttleendeavour.png" width="500" alt=""> <br>
+      <a class="clickable" href="https://californiasciencecenter.org/exhibits/endeavour-experience" target=”_blank”> Lift off! </a> &nbsp; <a class="clickable" href="https://californiasciencecenter.org/give-join/endeavourla-campaign/team-endeavour" target=”_blank”> Sponsor a tile </a> <br><br> <hr>
+    </section>
+
+    <section id="exhibits">
+      <h3> CHECK OUT OUR ENGAGING </h3>
+      <h2> EXHIBITS <a class="hyperlink" href="#exhibits" tabindex="-1 " rel="bookmark"> # </a> </h2>
+      <a class="clickable" href="https://californiasciencecenter.org/exhibits" target=”_blank”> Dive in! </a> <br><br> <hr>
+    </section>
+
+    <section id="programs">
+      <h3> LEARNING MADE FUN </h3>
+      <h2> PROGRAMS & EDUCATION <a class="hyperlink" href="#programs" tabindex="-1 " rel="bookmark"> # </a> </h2>
+      <a class="clickable" href="https://californiasciencecenter.org/programs" target=”_blank”> Connect and learn </a> <br><br> <hr>
+    </section>
+
+    <section id="imax">
+      <h3> COME SEE OUR </h3>
+      <h2> IMAX EXPERIENCE <a class="hyperlink" href="#imax" tabindex="-1 " rel="bookmark"> # </a> </h2>
+      <a class="clickable" href="https://californiasciencecenter.org/imax" target=”_blank”> Expand your view </a> <br><br> <hr>
+    </section>
+
+    <section id="events">
+      <h3> BOOK YOUR EVENT WITH US </h3>
+      <h2> PRIVATE EVENTS <a class="hyperlink" href="#events" tabindex="-1 " rel="bookmark"> # </a> </h2>
+      <a class="clickable" href="https://californiasciencecenter.org/private-events" target=”_blank”> Plan an event! </a> <br><br> <hr>
+    </section>
+
+    <section id="campaign">
+      <h3> SUPPORT OUR FUTURE VISION </h3>
+      <h2> ENDEAVOUR LA CAMPAIGN <a class="hyperlink" href="#campaign" tabindex="-1 " rel="bookmark"> # </a> </h2>
+      <a class="clickable" href="https://californiasciencecenter.org/give-join/endeavourla-campaign" target=”_blank”> Join the mission! </a> <br><br> <hr>
+    </section>
+
+    <section id="shop">
+      <h3> LEARNING AND FUN ARE IN STORE </h3>
+      <h2> SHOP ONLINE <a class="hyperlink" href="#shop" tabindex="-1 " rel="bookmark"> # </a> </h2>
+      <a class="clickable" href="https://californiasciencecenter.org/visit/explorastore-gift-shop" target=”_blank”> Find the perfect gift! </a> <br><br> <hr>
+    </section>
+
+    <section id="funlab">
+      <h3> Latest From the FunLab <a class="hyperlink" href="#funlab" tabindex="-1 " rel="bookmark"> # </a> </h3> <br><br> <hr>
+    </section>
+
+    <section id="member">
+      <h3> GIVE & JOIN <a class="hyperlink" href="#member" tabindex="-1 " rel="bookmark"> # </a> </h3>
+      Become a Member or support the California Science Center in a variety of ways. <br> <br>
+      <a class="clickable" href="https://californiasciencecenter.org/give-join" target=”_blank”> Explore giving options </a> <br><br> <hr>
+    </section>
+
+    <section id="newsletter">
+      <h3> Stay in Contact <a class="hyperlink" href="#newsletter" tabindex="-1 " rel="bookmark"> # </a> </h3>
+      NEWSLETTER SIGNUP <br>
+      <form>
+        <input id="myEmailInput" type="search" placeholder="Enter your email"> </input>
+        <button id="myEmailButton"> Sign Up </button>
+      </form>
+      <a href="https://www.facebook.com/CaliforniaScienceCenter/" target="_blank" aria-label="Visit California Science Center Facebook" class="fab fa-facebook-square"> </a>
+      <a href="https://twitter.com/casciencecenter" target="_blank" aria-label="Visit California Science Center Twitter" class="fab fa-twitter-square"> </a>
+      <a href="https://www.instagram.com/californiasciencecenter/" target="_blank" aria-label="Visit California Science Center Instagram" class="fab fa-instagram-square"> </a>
+      <a href="https://www.youtube.com/user/CalScience" target="_blank" aria-label="Visit California Science Center YouTube" class="fab fa-youtube-square"> </a>
+      <br> <hr>
+    </section>
+  <a class="bypass" href="#header"> Back to Top </a>
+  </main>
+
+  <footer>
+    ©2021 California Science Center - all rights reserved. California Science Center Foundation is a 501(c)3 nonprofit organization. Tax ID#95-2210527 <br>
+    <section>
+      <img src="https://leahkim07.github.io/DH150/csclogo.png" width="200" alt=""> <br>
+      <a href="https://goo.gl/maps/CSRyzYvnjnnrDC29A" target="_blank">
+      700 Exposition Park Drive <br>
+      Los Angeles, CA 90037 <br>
+      </a> <br>
+      <a href="https://californiasciencecenter.org/visit/directions-parking-transportation" target="_blank"> Get Directions </a> <br> <br>
+      Open Daily 10am-5pm <br>
+      Free General Admission <br> <br>
+      <a href="https://californiasciencecenter.org/contact" target="_blank"> CONTACT CALIFORNIA SCIENCE CENTER </a> <br>
+      <a href="tel:+1-323-724-3623">&#9742; (323) 724-3623 </a> <br>
+      <a href="https://californiasciencecenter.org/privacy-policy" target="_blank"> PRIVACY POLICY </a>
+    </address>
+    </section>
+  <hr>
+  <small>
+    This website is a markup of the original <a href="https://californiasciencecenter.org" target="_blank"> California Science Center. </a> The work is only for the assignment04, DH150: Web-coding for UX by Leah Kim. Here is <a href="https://leahkim07.github.io/DH150/assignment04-audit.png" target="_blank"> the accessibility/SEO audit result. </a> and <a href="https://leahkim07.github.io/DH150/assignment03-01-contrastcheck.png" target="_blank"> the WGAC contrast checks. </a>
+    <hr>
+    I conducted manual testing to check the compliance to <a href="https://www.w3.org/WAI/WCAG21/quickref/#principle2" target="_blank"> WCAG2.1 Guideline on Operable Interface. </a> The original California Science Center website is already mostly accessibile, but I enhanced the focus-visibility in my mock-up version of the website. This was achieved through the addition of CSS codes. The <a href="https://docs.google.com/spreadsheets/d/1oplRx3tk-QCGu5-NuSK_aVUbg0Fz1UqiXZWfYYwOskM/edit?usp=sharing" target="_blank"> results of keyboard-accessibility manual testing </a> are included.
+    <hr>
+    Results from Automated Testing Tool and Manual Testing <br>
+    1) The original website had little issues with both testings. It had labels for all the icons, link descriptions, and more. The screen reader did well on the website too because of this. <br>
+    2) Before revisions, my mock-up website was missing labels for my accessibility buttons, label for the logo, and labels for the social media icons. The screen reader did not work for the telephone icon when it was on the top by the other accessibility buttons. <br>
+    3) After revisions, my mock-up website received an accessibility score of 98, and the screen reader performed well throughout the website. The telephone icon in the footer also helped the screen reader. Labeling issues were resolved by the addition of the aria-labels.
+  </small>
+  </footer>
+<script>
+  var myBody = document.querySelector("body");
+  var myHeader = document.querySelector("header");
+  var myFooter = document.querySelector("footer");
+  var myMain = document.querySelector("main");
+
+  var myBigFontBTN = document.querySelector("#BgFontButton");
+  myBigFontBTN.addEventListener("click", MakeFontBigger);
+  function MakeFontBigger() {
+    myBody.style.fontSize="2em";
+  }
+
+  var mySmallFontBTN = document.querySelector("#SmFontButton");
+  mySmallFontBTN.addEventListener("click", MakeFontSmaller);
+  function MakeFontSmaller() {
+    myBody.style.fontSize="1em";
+  }
+
+  var myDarkModeBTN = document.querySelector("#darkModeButton");
+  myDarkModeBTN.addEventListener("click", MakeItDark);
+  function MakeItDark() {
+    myBody.classList.toggle("dark-mode");
+    myHeader.classList.toggle("dark-mode");
+    myFooter.classList.toggle("dark-mode");
+    myMain.classList.toggle("dark-mode2");
+
+    const allLinks = document.links;
+      for (let link of allLinks) {
+        link.classList.toggle("dark-mode-link");
+      }
+  }
+
+  var myLightModeBTN = document.querySelector("#lightModeButton");
+  myLightModeBTN.addEventListener("click", MakeItLight);
+  function MakeItLight() {
+    myBody.classList.toggle("light-mode");
+    myHeader.classList.toggle("light-mode");
+    myFooter.classList.toggle("light-mode");
+    myMain.classList.toggle("light-mode2");
+
+    const allLinks = document.links;
+      for (let link of allLinks) {
+        link.classList.toggle("light-mode-link");
+      }
+  }
+</script>
+</body>
+</html>
