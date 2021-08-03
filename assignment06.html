@@ -36,7 +36,7 @@
       margin: 20px;
     }
     section {
-      border-bottom: 1px dotted hsl(265, 100%, 24%);
+      border-bottom: 3px solid hsl(265, 100%, 24%);
     }
     button {
       background-color: hsla(265, 100%, 24%, 1);
@@ -48,6 +48,11 @@
       text-transform: uppercase;
       font-family: 'Poppins', sans-serif;
       text-align: center;
+    }
+    button:hover, button:focus {
+      background-color: hotpink;
+      color: white;
+      cursor: pointer;
     }
 
     .bypass {
@@ -119,20 +124,41 @@
 
     #assign02 {
       background-image: url("https://leahkim07.github.io/DH150/assignment02-audit.png");
-      background-size: cover;
-}
+      background-size: contain;
+    }
     #assign03 {
       background-image: url("https://leahkim07.github.io/DH150/assignment03-03-audit.png");
       background-size: cover;
-}
+    }
     #assign04 {
       background-image: url("https://leahkim07.github.io/DH150/assignment04-audit.png");
       background-size: cover;
-}
+    }
     #assign05 {
       background-image: url("https://leahkim07.github.io/DH150/assignment05.1-audit.png");
       background-size: cover;
-}
+    }
+    #semanticStructure {
+      margin: 1em;
+      padding: 1em;
+      background-color: hsla(265, 100%, 94%, 0.9);
+    }
+    #colorContrast {
+      margin: 1em;
+      padding: 1em;
+      background-color: hsla(265, 100%, 94%, 0.9);
+    }
+    #keyboard {
+      margin: 1em;
+      padding: 1em;
+      background-color: hsla(265, 100%, 94%, 0.9);
+    }
+    #ariaLabel{
+      margin: 1em;
+      padding: 1em;
+      background-color: hsla(265, 100%, 94%, 0.9);
+    }
+
 
     .imgBox {
       width: 15vw;
@@ -145,7 +171,7 @@
     .card {
       display: grid;
       grid-template-columns: 1fr 2fr;
-      width: 96vw;
+      width: 90vw;
       gap: 10px;
     }
     .dummy {
@@ -182,16 +208,16 @@
       border: 2px solid black;
     }
 
-    li a {
+    .active {
       display: block;
-      color: black;
+      color: hsl(265, 100%, 24%);
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
       background-color: hsl(265, 100%, 86%);
     }
 
-    li a:hover {
+    .active:hover, .active:focus {
       background-color: hsl(265, 100%, 24%);
       color: white;
     }
@@ -201,8 +227,16 @@
       font-weight: bold;
     }
     a:hover, a:focus {
-      background-color: white;
-      border: 1px solid #660000;
+      color:hotpink;
+      text-decoration: underline;
+    }
+    .dif {
+      color: hsla(265, 100%, 20%, 1);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .dif:hover, .dif:focus {
+      color: white;
       text-decoration: underline;
     }
 
@@ -254,7 +288,7 @@
 
     <h1> Web-Accessibility Project: California Science Center Website </h1>
     <h2> DH150 2021 Summer - Project Documentation by Leah Kim </h2>
-    <hr>
+    <section> </section>
     <h3> About the Project </h3>
     <p> This project is to test and improve the web-accessibility of museum websites. Specifically, I focused on improving the accessibility and SEO scores of the original California Science Center website. This was achieved through a multitude of steps, including semantic structure, color contrast, keyboard accessibility, screen reader, and ARIA labeling. </p>
   </header>
@@ -267,27 +301,27 @@
     <div id="images">
       <article class="imgBox">
         <p id="amnh"> </p>
-        <p> 1) American Museum of Natural History <a href="https://www.amnh.org/" target="_blank" title="go to american museum of natural history website"> https://www.amnh.org/, </a> Accessibility (93), SEO (100) </p>
+        <p> <a href="https://www.amnh.org/" target="_blank" title="go to american museum of natural history website"> 1) American Museum of Natural History</a> <br> Accessibility: 93 <br> SEO: 100 </p>
       </article>
 
       <article class="imgBox">
         <p id="met"> </p>
-        <p> 2) The MET <a href="https://www.metmuseum.org/" target="_blank" title="go to the met museum website"> https://www.metmuseum.org/, </a> Accessibility (91), SEO (83) </p>
+        <p> <a href="https://www.metmuseum.org/" target="_blank" title="go to the met museum website"> 2) The MET</a><br> Accessibility: 91 <br> SEO: 83 </p>
       </article>
 
       <article class="imgBox">
         <p id="csc"> </p>
-        <p> 3) California Science Center <a href="https://californiasciencecenter.org/" target="_blank" title="go to the california science center website"> https://californiasciencecenter.org/, </a> Accessibility (93), SEO (75) </p>
+        <p> <a href="https://californiasciencecenter.org/" target="_blank" title="go to the california science center website"> 3) California Science Center</a><br> Accessibility: 93 <br> SEO: 75 </p>
       </article>
 
       <article class="imgBox">
         <p id="moma"> </p>
-        <p> 4) MoMA <a href="https://www.moma.org/" target="_blank" title="go to the moma website"> https://www.moma.org/, </a> Accessibility (94), SEO (100) </p>
+        <p> <a href="https://www.moma.org/" target="_blank" title="go to the moma website"> 4) MoMA</a><br> Accessibility: 94 <br> SEO: 100 </p>
       </article>
 
       <article class="imgBox">
         <p id="louvre"> </p>
-        <p> 5) The Louvre <a href="https://www.louvre.fr/en" target="_blank" title="go to the louvre museum website"> https://www.louvre.fr/en, </a> Accessibility (100), SEO (100) </p>
+        <p> <a href="https://www.louvre.fr/en" target="_blank" title="go to the louvre museum website"> 5) The Louvre</a><br> Accessibility: 100 <br> SEO: 100 </p>
       </article>
     </div>
 
@@ -303,27 +337,27 @@
 
         <div id="images2">
           <article class="card" id="semanticStructure">
-            <p class="dummy" id="assign02"> Semantic Structure </p>
-            <p class="description"> To ensure the semantic structure of HTML, I made sure to include all the components and double check that each one is placed in the correct order and that it is closed. This was fairly simple, but it was important as the first step to improve accessibility. The first parts of styling were also introduced in the forms of headings, line breaks, horizontal lines, and more. <br><br>
-            <a href="https://leahkim07.github.io/DH150/assignment02.html" target="_blank"> <button> Check the outcome of semantic structure (assignment 02) </button> </a> </p>
+            <p class="dummy" id="assign02"> </p>
+            <p class="description"> <b>SEMANTIC STRUCTURE:</b> To ensure the semantic structure of HTML, I made sure to include all the components and double check that each one is placed in the correct order and that it is closed. This was fairly simple, but it was important as the first step to improve accessibility. The first parts of styling were also introduced in the forms of headings, line breaks, horizontal lines, and more. <br><br>
+            <a href="https://leahkim07.github.io/DH150/assignment02.html" target="_blank" tabindex="-1"> <button> Check the outcome of semantic structure (assignment 02) </button> </a> </p>
           </article>
 
           <article class="card" id="colorContrast">
-            <p class="dummy" id="assign03"> Color Contrast </p>
-            <p class="description"> The following step was to ensure sufficient color contrast, at a ratio of 4.5:1. This required much more experimentation because it was not easy to utilize colors that fit the color scheme and had good contrast with each other. I used a color picker, a color contrast checker, and a color scheme design to incorporate some styling to my website. CSS was introduced, and I used this to add a font, change layouts, and more to improve the overall design. <br><br>
-            <a href="https://leahkim07.github.io/DH150/assignment03-01.html" target="_blank"> <button> Check the outcome of color contrast (assignment 03) </button> </a> </p>
+            <p class="dummy" id="assign03"> </p>
+            <p class="description"> <b>COLOR CONTRAST:</b> The following step was to ensure sufficient color contrast, at a ratio of 4.5:1. This required much more experimentation because it was not easy to utilize colors that fit the color scheme and had good contrast with each other. I used a color picker, a color contrast checker, and a color scheme design to incorporate some styling to my website. CSS was introduced, and I used this to add a font, change layouts, and more to improve the overall design. <br><br>
+            <a href="https://leahkim07.github.io/DH150/assignment03-01.html" target="_blank" tabindex="-1"> <button> Check the outcome of color contrast (assignment 03) </button> </a> </p>
           </article>
 
           <article class="card" id="keyboard">
-            <p class="dummy" id="assign04"> Keyboard Accessibility </p>
-            <p class="description"> Afterwards, it was time to tackle keyboard accessibility. This was achieved through manual testing, and this was where the CSS features of hover and focus, as well as bypass blocks were important. The original website had slight issues with tabbing order, so I made sure to improve that on my own version. The manual testing of both websites helped to correct minor mistakes in keyboard accessibility. <br><br>
-            <a href="https://leahkim07.github.io/DH150/assignment04.html" target="_blank"> <button> Check the outcome of keyboard accessibility (assignment 04) </button> </a> </p>
+            <p class="dummy" id="assign04"> </p>
+            <p class="description"> <b>KEYBOARD ACCESSIBILITY:</b> Afterwards, it was time to tackle keyboard accessibility. This was achieved through manual testing, and this was where the CSS features of hover and focus, as well as bypass blocks were important. The original website had slight issues with tabbing order, so I made sure to improve that on my own version. The manual testing of both websites helped to correct minor mistakes in keyboard accessibility. <br><br>
+            <a href="https://leahkim07.github.io/DH150/assignment04.html" target="_blank" tabindex="-1"> <button> Check the outcome of keyboard accessibility (assignment 04) </button> </a> </p>
           </article>
 
           <article class="card" id="ariaLabel">
-            <p class="dummy" id="assign05"> Screen-reader and ARIA </p>
-            <p class="description"> In this final step, I added aria-labels to make sure the screen-reader can successfully identify all of the website components. This was also polished through testing with the screen-reader myself, and it seemed to be working well. Interactive icons for accessibility purposes, such as font-size increasing and contrast modes, were also included. <br><br>
-            <a href="https://leahkim07.github.io/DH150/assignment05.1.html" target="_blank"> <button> Check the outcome of screen-reader and ARIA (assignment 05) </button> </a> </p>
+            <p class="dummy" id="assign05"> </p>
+            <p class="description"> <b>ARIA:</b> In this final step, I added aria-labels to make sure the screen-reader can successfully identify all of the website components. This was also polished through testing with the screen-reader myself, and it seemed to be working well. Interactive icons for accessibility purposes, such as font-size increasing and contrast modes, were also included. <br><br>
+            <a href="https://leahkim07.github.io/DH150/assignment05.1.html" target="_blank" tabindex="-1"> <button> Check the outcome of screen-reader and ARIA (assignment 05) </button> </a> </p>
           </article>
         </div>
 
@@ -338,7 +372,7 @@
   </main>
 
   <footer>
-    <p> Leah Kim (Contact Info: <a href=”mailto:gettyinfo@getty.edu”> leahk2001@gmail.com</a>), Copyright 2021 </p>
+    <p> Leah Kim (Contact Info: <a href=”mailto:gettyinfo@getty.edu” class="dif"> leahk2001@gmail.com</a>), Copyright 2021 </p>
   </footer>
 
 <script>
